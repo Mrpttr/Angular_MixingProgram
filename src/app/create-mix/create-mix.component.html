@@ -1,0 +1,51 @@
+<!-- Product -->
+
+
+<!-- 
+<select [(ngModel)] = "userName">
+      Product: <option (click) = 'Search()' *ngFor="let pro of Products">{{pro}}</option>
+    </select>
+
+<br>
+<br>
+
+-->
+
+<br>
+<br>
+
+  <div class="w3-container" style="padding: 15px 50px;">
+    <h6>Product:</h6>
+    <select [(ngModel)] ="userName">
+      <option   *ngFor="let pro of Products">{{pro}}</option>
+    </select>
+    <button [value]="userName" type="submit" (click) = 'Search()'>Search</button>
+  </div>
+
+<br>
+<br>
+  
+<div class="w3-container">
+      <table border="1px">
+          <tr style="width: auto;">   
+            <!-- <th *ngFor="let head of headers">{{head}}</th> -->
+            <th align="center">Login</th>
+            <th align="center">Id</th>
+            <th align="center">Public repos</th>
+            <th align="center">Url</th>
+          </tr>
+          <tr *ngIf = "userData" border="2px"> 
+            <!--Dynamically should update the data from the json to the rows and the columns should increase and decrese accrodingly -->
+            <td align="center">{{userData.login}}</td>
+            <td align="center">{{userData.id}}</td>
+            <td align="center">{{userData.public_repos}}</td>
+            <td align="center">{{userData.url}}</td>
+          </tr>
+      </table>
+  </div>
+
+
+  <div class="w3-container">
+    
+
+  </div>

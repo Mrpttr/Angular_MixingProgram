@@ -1,0 +1,29 @@
+<p>
+  deflection works!
+</p>
+
+<div class="w3-container">
+    <table border="1px" *ngIf="userName">
+
+      <thead align="center">  
+        <tr style="width: auto;">
+          <th>Login</th>
+          <th>Id</th>
+          <th>Url</th>
+          <th>Site Admin</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor="let name of userName" border="2px"> 
+          <td align="center">{{name.login}}</td>
+          <td align="center">{{name.id}}</td>
+          <td align="center"><input type="text">{{name.url}}</td>
+          <td align="center">{{name.site_admin}}</td>
+          <td align="center">{{name.type}}</td>
+        </tr>
+      </tbody>
+    
+    </table>
+</div>
